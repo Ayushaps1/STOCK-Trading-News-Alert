@@ -65,8 +65,8 @@ if change_in_price > 5:
     message = client.messages \
         .create(
         body=f"{STOCK}: {change}{change_in_percentage}%\n{news_msg}",
-        from_='+18126355246',
-        to='+918305262499'
+        from_=os.environ.get("TWILIO_PHONE_NUMBER"),
+        to=os.environ.get("PHONE_NUMBER")
     )
 
     print(message.sid)
