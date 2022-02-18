@@ -8,11 +8,11 @@ COMPANY_NAME = "tesla"
 stock_api_endpoint = "https://www.alphavantage.co/query"
 news_api_endpoint = "https://newsapi.org/v2/everything"
 
-news_api_key = "b3ff737ad18041d4bb84b9e9524d5adb"
-stock_api_key = "EYJH2E28RDSH25SN"
+news_api_key = os.environ.get("NEWS_API_KEY")
+stock_api_key = os.environ.get("STOCK_API_KEY")
 
-account_sid = "AC2865eb7a5ced1e170798ad031889f39f"
-auth_token = "aa62ba6e0a4d206d4b7c667ee10ca049"
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("AUTH_TOKEN")
 
 #########--------------Getting the change in stock price------------###########
 
